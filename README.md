@@ -12,13 +12,18 @@ I had some problems going back and it took me some time to do so, so I hope this
 
 Recovery steps:
 
-1. Remove the Buddy board cover and brige the two pins for recory mode
+1. Remove the Buddy board cover and brige the two pins for DFU mode
 2. Connect the buddy board to your computer with a micro USB cable and turn ON the printer
-3. Inside STM32 Cube Programmer, open file, select the bootloader file from this repository
-4. Download the file onto the MCU
-5. Reboot printer
-6. At this point, you should get an error on the MINI Display telling your that there is no firmware file and that you should load it over the USB drive
-7. Find Firmware 4.4.1 on Original Prusa Buddy board firmware repository and put both files on you USB drive (This step will update the bootloader)
-8. Flash the 4.4.1 firmware by plugging the USB drive into the printer and pressing the reset button, following the steps on screen
-9. From here, you can either do the first time setup or upgrade to newer firmware but at this point your printer should be restored!
+3. Inside STM32 Cube Programmer, connect to MCU, open file, and select the bootloader .bin file from this repository
+4. Download the file onto the MCU (Flash it!)
+5. Reboot the printer
+6. At this point, you should get an error on the MINI Display telling you that there is no firmware file and that you should load it over the USB drive
+7. Find Firmware 4.4.1 on Original Prusa Buddy board firmware repository and put both files on your USB drive (This step will update the bootloader)
+   - Firmware 4.4.1 comes with two files, make sure to download both and transfer both to the USB drive
+8. Flash the 4.4.1 firmware by plugging the USB drive into the printer and pressing the reset button on the display, following the steps on screen
+   - If Bootloader update freezes the printer when the progress bar is at the end, just press the reset button on the display and it will continue     
+     installing the firmware
+9. From here, you can either do the first time setup or upgrade to newer firmware version but at this point your printer should be restored!
+
+    thank me later aligater
 
